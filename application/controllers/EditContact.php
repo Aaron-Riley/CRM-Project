@@ -9,4 +9,8 @@ class EditContact extends CI_Controller {
 		$this->load->view('EditContact');
 	}
 
+	public function edit($editUrl = '')
+	{
+		echo "edit contact with url: " . $editUrl;
+	}
 }

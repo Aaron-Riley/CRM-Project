@@ -5,8 +5,15 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['view'] = 'welcome/ViewAll';
-$route['create'] = 'welcome/CreateContact';
-$route['edit'] = 'welcome/EditContact';
-$route['delete'] = 'welcome/DeleteContact';
-$route['search'] = 'welcome/SearchContact';
+
+$route['view'] = 'ViewAll/index';
+$route['create'] = 'CreateContact/index';
+$route['edit'] = 'EditContact/index';
+$route['delete'] = 'DeleteContact/index';
+$route['search'] = 'SearchContact/index';
+
+// Using routing tests to understand how I can get to the specific users for each of the below routes
+
+$route['view/(:num)'] = 'ViewAll/view/$1';
+$route['edit/(:num)'] = 'EditContact/edit/$1';
+$route['delete/(:num)'] = 'DeleteContact/delete/$1';
