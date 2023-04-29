@@ -17,3 +17,8 @@ $route['search'] = 'SearchContact/index';
 $route['view/(:num)'] = 'ViewAll/view/$1';
 $route['edit/(:num)'] = 'EditContact/edit/$1';
 $route['delete/(:num)'] = 'DeleteContact/delete/$1';
+
+
+$route['contacts'] = 'Frontend/ContactController/index';
+$route['contacts/create'] = 'Frontend/ContactController/create';
+$route['contacts/store'] = 'Frontend/ContactController/store';
