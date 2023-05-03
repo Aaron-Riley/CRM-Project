@@ -20,16 +20,18 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@123455</td>
-      <td>Lorem Ipsum</td>
-      <td><a href="" class="btn btn-secondary">Edit</td>
-      <td><a href="" class="btn btn-danger">Delete</td>
-    </tr>
+    <?php foreach($contacts as $contact) : ?>
+      <tr>
+        <th scope="row"><?php echo $contact->contact_id; ?></th>
+        <td><?php echo $contact->first_name; ?></td>
+        <td><?php echo $contact->last_name; ?></td>
+        <td><?php echo $contact->email; ?></td>
+        <td><?php echo $contact->number; ?></td>
+        <td><?php echo $contact->notes; ?></td>
+        <td><a href="<?php echo base_url('index.php/contacts/edit/'.$contact->contact_id)?>" class="btn btn-secondary">Edit</td>
+        <td><a href="" class="btn btn-danger">Delete</td>
+      </tr>
+      <?php endforeach; ?>
   </tbody>
 </table>
 </div>

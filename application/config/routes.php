@@ -22,3 +22,5 @@ $route['delete/(:num)'] = 'DeleteContact/delete/$1';
 $route['contacts'] = 'Frontend/ContactController/index';
 $route['contacts/create'] = 'Frontend/ContactController/create';
 $route['contacts/store'] = 'Frontend/ContactController/store';
+$route['contacts/edit/(:num)'] = 'Frontend/ContactController/edit/$1';
+$route['contacts/update/(:any)'] = 'Frontend/ContactController/update/$1';
